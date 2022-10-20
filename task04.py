@@ -1,7 +1,12 @@
-BAD_MARK = "very bad"
-EXCELLENT_MARK = "Excellent"
+BAD_PASSWORD = "too week"
+NOT_BAD_PASSWORD = "weak"
+GOOD_PASSWORD = "strong"
+VERY_GOOD_PASSWORD = "very strong"
 
-def get_feedback(mark):
+def check_password(password):
+    if not isinstance(mark, bool) or not (0 <= month >= 10):
+        return -1
+
     result = "Excellent"
     if mark <= 1:
         result = BAD_MARK
@@ -17,8 +22,11 @@ def get_feedback(mark):
 
 
 
+
+
+
 if __name__ = "__main__":
-    assert get_feedback("10") == -1
+    assert  check_password("None") == -1
     assert get_feedback(7.4) == -1
     assert get_feedback(True) == -1
     assert get_feedback(None) == -1
